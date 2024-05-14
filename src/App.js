@@ -1,0 +1,33 @@
+import './App.css';
+import styled,{ThemeProvider} from 'styled-components';
+import { lightTheme } from './utils/Themes';
+import Hero from "./components/HeroSection";
+//import About from "./components/About";
+import Skills from "./components/Skills";
+//import Projects from "./components/Projects";
+//import Contact from "./components/Contact";
+//import Footer from "./components/Footer";
+//import Experience from "./components/Experience";
+import Education from "./components/Education";
+import NavBar from "./components/NavBar";
+import { BrowserRouter as Router } from 'react-router-dom';
+const Body = styled.div`
+    background-color: ${({ theme }) => theme.bg};
+    width: 100%;
+    overflow-x: hidden;
+`
+function App() {
+    return (
+        <ThemeProvider theme={lightTheme}>
+            <Router>
+                <NavBar />
+                <Body>
+                    <Hero />
+                    <Skills />
+                    <Education />
+                </Body>
+        </Router>
+        </ThemeProvider>
+    );
+}
+export default App;

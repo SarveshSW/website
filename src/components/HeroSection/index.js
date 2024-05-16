@@ -4,7 +4,7 @@ import {Bio} from "../../data/constant.js";
 import Typewriter from "typewriter-effect";
 import ProfilePic from "../../media/HeroImage.jpg"
 const HeroContainer = styled.div`
-    background-color: ${({theme}) => theme.section_color};
+    background-color: ${({theme}) => theme.test};
     display: flex;
     justify-content: center;
     postion:relative;
@@ -179,10 +179,12 @@ object-fit: cover;
 object-position: center;
 border: 2px solid${({theme}) => theme.primary};
 @media (max-width: 768px) {
+    margin-right: 0px;
     max-width: 400px;
     max-height: 500px;
 }
 @media (max-width: 640) {
+    margin-right: 0px;
     max-width: 280px;
     max-height: 280px;
 }

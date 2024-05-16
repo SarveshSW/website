@@ -8,7 +8,7 @@ import Skills from "./components/Skills";
 //import Projects from "./components/Projects";
 //import Contact from "./components/Contact";
 //import Footer from "./components/Footer";
-//import Experience from "./components/Experience";
+import Experience from "./components/Experience";
 import Education from "./components/Education";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -25,6 +25,7 @@ function App() {
                 <Body>
                     <Hero />
                     <Skills />
+                    <Experience />
                     <Education />
                 </Body>
             </Router>

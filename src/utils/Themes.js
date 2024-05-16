@@ -13,12 +13,13 @@ export const darkTheme = {
 
 export const lightTheme = {
     bg:"#FFFFFF",
-    bgLight: "#f0f0f0",
+    bgLight: "#e8e6e6",
     primary:"#6b696b",
     text_primary:"#000000",
     text_secondary:"#111111",
     card:"#FFFFFF",
     button:"#5c5b5b",
     black: "#000000",
-    section_color: "#cccaca"
+    section_color: "#cccaca",
+    test: "#EEEDE7"
 }

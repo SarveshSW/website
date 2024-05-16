@@ -1,6 +1,7 @@
 import './App.css';
 import styled,{ThemeProvider} from 'styled-components';
 import { lightTheme } from './utils/Themes';
+import NavBar from "./components/NavBar";
 import Hero from "./components/HeroSection";
 //import About from "./components/About";
 import Skills from "./components/Skills";
@@ -9,8 +10,8 @@ import Skills from "./components/Skills";
 //import Footer from "./components/Footer";
 //import Experience from "./components/Experience";
 import Education from "./components/Education";
-import NavBar from "./components/NavBar";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
+
 const Body = styled.div`
     background-color: ${({ theme }) => theme.bg};
     width: 100%;
@@ -26,8 +27,9 @@ function App() {
                     <Skills />
                     <Education />
                 </Body>
-        </Router>
+            </Router>
         </ThemeProvider>
-    );
+
+    )
 }
 export default App;

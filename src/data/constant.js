@@ -1,15 +1,16 @@
+import Resume from "/Users/sarveshwanzare/Desktop/website/src/media/Sarvesh_CV.pdf"
+
 export const Bio = {
     name: "Sarvesh Wanzare",
     roles: [
-      "Mechatronics Engineering and Computer Science Student",
-      "Software Engineering Intern",
       "Programmer",
+      "Mechatronics Engineering Student",
+      "Computer Science Student",
     ],
     description:
       "I Am a 4th-year Mechatronics Engineering and Computer Science student studying at UNSW, Sydney. In my academic life, I have been a part of many projects and have had the opportunity to work with multiple people across different backgrounds to come up with successful high-level software projects. Using the experience I have gained at university, I am seeking for a software engineering internship in order to get professional experience in the industry.",
     github: "https://github.com/sarveshsw",
-    resume:
-      "src/media/Sarvesh_CV.pdf",
+    resume:Resume,
     linkedin: "https://www.linkedin.com/in/sarveshwanzare/",
   };
   

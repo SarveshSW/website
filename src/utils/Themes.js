@@ -21,5 +21,6 @@ export const lightTheme = {
     button:"#5c5b5b",
     black: "#000000",
     section_color: "#cccaca",
-    test: "#EEEDE7"
+    test: "#EEEDE7",
+    card_secondary:"#B9B7BD"
 }

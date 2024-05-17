@@ -12,6 +12,8 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
+min-height: 80vh; /* Ensure it takes up at least 80% of the viewport height */
+  flex-grow: 1;
 `
 
 const Wrapper = styled.div`
@@ -53,9 +55,8 @@ const SkillCard = styled.div`
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
-  background: ${({ theme }) => theme.test};
+  background: ${({ theme }) => theme.bgLight};
   border: 0.1px solid #000000;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
   @media (max-width: 768px) {
@@ -76,7 +77,7 @@ const Skill = styled.div`
 const SkillTitle = styled.h2`
   font-size: 28px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
+  color: ${({ theme }) => theme.black};
   margin-bottom: 20px;
   text-align: center;
 `
@@ -92,7 +93,7 @@ const SkillList = styled.div`
 const SkillItem = styled.div`
   font-size: 16px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
+  color: ${({ theme }) => theme.black };
   border: 1px solid ${({ theme }) => theme.text_primary + 80};
   border-radius: 12px;
   padding: 12px 16px;

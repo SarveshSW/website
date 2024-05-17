@@ -1,5 +1,5 @@
 import Resume from "/Users/sarveshwanzare/Desktop/website/src/media/Sarvesh_CV.pdf"
-
+import ReferenceLetter from "/Users/sarveshwanzare/Desktop/website/src/media/Screenshot 2024-05-17 at 6.03.31 PM.png";
 export const Bio = {
     name: "Sarvesh Wanzare",
     roles: [
@@ -59,8 +59,12 @@ export const Bio = {
           image: "https://www.macworld.com/wp-content/uploads/2023/01/learn_java_on_mac.jpg?quality=50&strip=all"
         },
         {
-            name: "C++/C",
-            image: "https://pluralsight.imgix.net/paths/path-icons/c-plus-plus-93c7ddd5cc.png"
+          name: "C++/C",
+          image: "https://pluralsight.imgix.net/paths/path-icons/c-plus-plus-93c7ddd5cc.png"
+        },
+        {
+          name: "Solidity",
+          image: "https://pluralsight.imgix.net/paths/path-icons/c-plus-plus-93c7ddd5cc.png"
         },
       ],
     },
@@ -69,8 +73,7 @@ export const Bio = {
       skills: [
         {
           name: "Git",
-          image:
-            "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
+          image:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
         },
         {
           name: "GitHub",
@@ -116,7 +119,6 @@ export const Bio = {
         "Teamwork"
         
       ],
-      doc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbuyYTjfHLXLtmaFXmRcPbx_OkuFQmFD1YfS8LhXWT-g&s",
     },
     {
       id: 1,
@@ -133,7 +135,7 @@ export const Bio = {
         "C++",
         "Physics",
       ],
-      doc: "https://www1.lovethatdesign.com/wp-content/uploads/2020/08/Grohe-Logo.png",
+      doc: ReferenceLetter,
     },
   ];
   

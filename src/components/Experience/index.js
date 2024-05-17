@@ -5,7 +5,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-//import ExperienceCard from '../Cards/ExperienceCard';
+import ExperienceCard from '../Cards/ExperienceCard';
 import { experiences } from '../../data/constant.js';
 import styled from 'styled-components';
 const Container = styled.div`
@@ -17,7 +17,7 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
-`
+`;
 export const Title = styled.div`
 font-size: 42px;
 text-align: center;
@@ -46,13 +46,15 @@ const Experience = () => {
             <TimelineContainer>
                 <Timeline>
                     
-                {experiences.map((experience) => (
+                {experiences.map((experience, index) => (
                     <TimelineItem>
                         <TimelineSeparator>
                             <TimelineDot variant="outlined" color = "inherit"/>
-                            <TimelineConnector />
+                            {index !== experiences.length - 1 && <TimelineConnector/>}
                         </TimelineSeparator>
-                        <TimelineConnector>Hello</TimelineConnector>
+                        <TimelineContent sx={{py:'12px', px:'2px'}}>
+                            <ExperienceCard experience={experience}/>
+                        </TimelineContent >
                     </TimelineItem>
                 ))}
                 </Timeline>

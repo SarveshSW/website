@@ -12,23 +12,11 @@ justify-content: center;
 position: relative;
 z-index: 1;
 align-items: center;
-min-height: 80vh; /* Ensure it takes up at least 80% of the viewport height */
+min-height: 10vh; /* Ensure it takes up at least 80% of the viewport height */
   flex-grow: 1;
 `
 
-const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1100px;
-gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
-`
+
 
 export const Title = styled.div`
 font-size: 42px;
@@ -122,10 +110,12 @@ const Skills = () => {
 
             <Title>Skills</Title>
                 <SkillCard>
+                  
                  {skills.map((item) => (
                     <Skill>
                         <SkillTitle>{item.title}</SkillTitle>
                         <SkillList>
+
                             {item.skills.map((skill) => (
                                 <SkillItem>
                                     <SkillImage src={skill.image} />

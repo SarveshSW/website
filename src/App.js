@@ -3,10 +3,8 @@ import styled,{ThemeProvider} from 'styled-components';
 import { lightTheme } from './utils/Themes';
 import NavBar from "./components/NavBar";
 import Hero from "./components/HeroSection";
-//import About from "./components/About";
 import Skills from "./components/Skills";
-//import Projects from "./components/Projects";
-//import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 //import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
@@ -26,6 +24,7 @@ function App() {
                     <Hero />
                     <Skills />
                     <Experience />
+                    <Projects />
                     <Education />
                 </Body>
             </Router>

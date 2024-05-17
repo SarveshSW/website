@@ -1,5 +1,6 @@
 import Resume from "/Users/sarveshwanzare/Desktop/website/src/media/Sarvesh_CV.pdf"
-import ReferenceLetter from "/Users/sarveshwanzare/Desktop/website/src/media/Screenshot 2024-05-17 at 6.03.31 PM.png";
+import ReferenceLetter from "/Users/sarveshwanzare/Desktop/website/src/media/ReferenceLetter.png"
+import Serv2ULandingPage from "/Users/sarveshwanzare/Desktop/website/src/media/serv2uWebsite.png"
 export const Bio = {
     name: "Sarvesh Wanzare",
     roles: [
@@ -137,15 +138,31 @@ export const Bio = {
       ],
       doc: ReferenceLetter,
     },
+    {
+      id: 2,
+      img: "https://tutordoctor.com.au/wp-content/uploads/2019/05/gWHwwTOQ-1024x478.jpg",
+      role: "Tutor",
+      company: "Tutor Doctor North Shore",
+      date: "May 2023 - Present",
+      desc: "Being a tutor is one of the most rewarding jobs. I am a tutor for year 8-12 high schoolers teaching various subjects like Mathematics, Physics, and Computer Science",
+      skills: [
+        "Teaching",
+        "Communication",
+        "Mathematics",
+        "Physics",
+        "Computer Science"
+      ],
+    },
+    
   ];
   
   export const education = [
     {
       id: 0,
-      img: "https://universitiesaustralia.edu.au/wp-content/uploads/2019/05/UNSW-1-300x300.png",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdKjzrg_RSda0TzIKe9EA3yGkgFP4vlJ_YZX5K1EunpA&s",
       school: "University of New South Wales",
-      date: "Oct 2021 - Sep 2025",
-      grade: "78 WAM (Weighted Average Mark)",
+      date: "Sep 2020 - Present (Graduating Mid 2025)",
+      grade: "79 WAM (Weighted Average Mark)",
       desc: "I have been studying a very demanding course in mechatronics engineering and computer science. As a child, I was really interested in robotics and before I knew it, I became a distinction student at one of the top universities in Australia and the world. Ever since then, it has been a culmination of countless sleepless nights, a lot of hard work and dedication, and a strong belief in myself which has shaped me to be a well-rounded individual with a very strong technical background.",
       degree: "Mechatronics Engineering(Honours) and Computer Science (Artificial Intelligence)",
     },
@@ -163,7 +180,7 @@ export const Bio = {
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIJoe_Rzrjc5m3lKanUt3nn8b8c_oUd1VhFw_ESu0G2A&s",
       school: "GEMS Modern Academy, Dubai",
       date: "Apr 2008 - Apr 2018",
-      grade: "92.3%",
+      grade: "90.8%",
       desc: "I completed my year 10 education at GEMS Modern Academy, Dubai, where I discovered my love for the sciences and computers",
       degree: "ICSC(X), Science with Computer",
     },
@@ -172,11 +189,12 @@ export const Bio = {
   export const projects = [
     {
       id: 0,
+      mediaType: "image",
       title: "Parkify",
       //date: "Jun 2023 - Jul 2023",
       description:
         "Parkify is a web app that was coded by me and my university friends. In today’s times, with an increase in population and high-density living, space has become one of the most sought-after commodities. Urban cities on average have only one parking space for every six drivers; as a result, finding a parking space has proved itself to be a huge challenge. Parkify is a car space rental management system that enables providers to rent out their parking spaces to people seeking to park their car.",
-      image:
+      mediaUrl:
         "https://static.wixstatic.com/media/de15e5_e3f7d95b1fec409186f01331421f928b~mv2.png/v1/fill/w_196,h_95,al_c,lg_1,q_85,enc_auto/de15e5_e3f7d95b1fec409186f01331421f928b~mv2.png",
       tags: [
         "Python",
@@ -196,11 +214,12 @@ export const Bio = {
     },
     {
       id: 1,
+      mediaType: "image",
       title: "Kaggle AMP Parkinsons Disease Competition",
       //date: "Apr 2023 - May 2023",
       description:
         "In this project, our group investigated the capacity for blood-work signals in patients to indicate the MDS-UPDRS level for that patient. In our investigation, we used five different machine learning techniques to identify if a relationship between the progression of Parkinson's disease of a patient and that patient’s blood work exists. Our findings showed that the gradient boost method showed the most accurate correlation between the updrs scores and the protein and peptide levels of a patient.",
-      image:
+      mediaUrl:
         "https://miro.medium.com/v2/resize:fit:1000/1*YJXoRx1-WoZN2k3L14_K4A.jpeg",
       tags: ["Machine Learning", "Artificial Intelligence","Numpy", "Git"],
       category: "Machine Learning Project",
@@ -209,13 +228,15 @@ export const Bio = {
     },
     {
       id: 2,
+      mediaType: "video",
       title: "Wall Following and Image Recognition Robot",
       //date: "Oct 2022 - Present",
       description:
         "This project was one of my favorite projects by far! I got to work with a TurtleBot Waffle Pi and write software for it to navigate through a maze using the right-hand wall following algorithm. Other people in my team were responsible for image recognition and I was responsible for writing code for the wall following behaviour, map a 2D image of the maze using LIDAR, and finetuning.",
-      image:
-        "https://static.wixstatic.com/media/de15e5_3b7929f60e7d46e29ba313da84851114f000.jpg/v1/fill/w_312,h_416,al_c,q_80,usm_0.33_1.00_0.00,enc_auto/de15e5_3b7929f60e7d46e29ba313da84851114f000.jpg",
-      tags: [
+      mediaUrl:
+        "https://dl.dropboxusercontent.com/scl/fi/m8m3o5uds4t0u5qhamcow/No-audio.mov?rlkey=tyk05euaij1d3beylvucahumy&st=t30xee4x&dl=0",
+      
+        tags: [
         "ROS",
         "Python",
         "Git",
@@ -227,11 +248,12 @@ export const Bio = {
     },
     {
       id: 3,
+      mediaType: "image",
       title: "Simplified TCP File Transfer Protocol",
       //date: "Jan 2023 - Mar 2023",
       description:
         "TCP Connection is used heavily nowadays, it provides reliable data transfer from a sender to a receiver. In this project, I decided to make my own file transfer protocol which sends .txt files from a sender to a receiver through a localhost. In this project, I have also simulated packet loss and implemented strategies used in the industry (3 Duplicate ACKs, a hybrid of Go-Back-N and Selective Repeat, and a retransmission timer) in my own transfer protocol in order to combat such instances which are very prevalent in today's network.",
-      image:
+      mediaUrl:
         "https://www.ipxo.com/app/uploads/2022/06/TCP-IP-820x460.jpg",
       tags: ["Python", "Computer Networking", "Socket Programming"],
       category: "Web-App",
@@ -240,11 +262,12 @@ export const Bio = {
     },
     {
       id: 4,
+      mediaType: "image",
       title: "Unmanned Ground Vehicle",
       //date: "Dec 2021 - Apr 2022",
       description:
         "In this project, I was making a UGV. This project required deep knowledge of C++/CLR, multithreading, and object oriented programming. The project involved giving the UGV capabilities such as scanning the area and mapping its surroundings, controlling its drivetrain using an X-Box controller, and GPS capabilities.",
-      image:
+      mediaUrl:
         "https://pbs.twimg.com/media/Bqc-UrUCIAEhWb4.jpg",
       tags: ["C++/CLR", "Multithreading", "Object Oriented Programming"],
       category: "Robotics",
@@ -253,29 +276,55 @@ export const Bio = {
     },
     {
       id: 5,
+      mediaType: "image",
       title: "ML Based Recommender System",
       //date: "Jun 2023 - Jul 2023",
       description:
         "As a computer science student specializing in Artificial Intelligence, I was always intrigued by how companies like Amazon recommend items to buy. Being the curious-minded individual that I am, I made my very own recommendation system for my project Parkify. This project was one of the most challenging solo projects that I had taken up. I implemented a collaborative-based recommendation system, this algorithm learns how users react to different parking spaces in real-time, creates a similarity matrix based on user-product interaction, and then uses the k-nearest algorithm to make predictions for users.",
-      image:
+      mediaUrl:
         "https://miro.medium.com/v2/resize:fit:649/0*xA2P_g7T4TOPRKJE.png",
       tags: ["Machine Learning", "Python", "Recommendation Systems"],
-      category: "Web-App",
+      category: "Machine Learning Project",
       github: "https://github.com/sarveshsw",
       //webapp: "https://github.com/rishavchanda/Job-finder-App",
     },
     {
       id: 6,
+      mediaType: "video",
       title: "Obstacle Avoiding Robot",
       //date: "Jul 2021",
       description:
         "I had made this project when I was in my first year. It was a very simple project. I had created my very own car that ran on 4 motors powered by a battery and I had used a SONAR in order to detect any obstacles in front of the vehicle. This was the first time I had actually worked with anything remotely close to robots and it paved the way for much more successful and exciting projects for me in the future! This is me testing my project out at home back in Dubai.",
-      image:
-        "https://static.wixstatic.com/media/de15e5_b9d871e67489456bb5fcca7ef60946ccf000.jpg/v1/fill/w_237,h_414,al_c,q_80,usm_0.33_1.00_0.00,enc_auto/de15e5_b9d871e67489456bb5fcca7ef60946ccf000.jpg",
+      mediaUrl:
+        "https://dl.dropboxusercontent.com/scl/fi/y6axyxtvw9glgypp754qy/Untitled.mov?rlkey=ljzfi02b8o04cpc2v94xsn4su&st=ad6x0jlj&dl=0",
       tags: ["Arduino", "C", "Circuit Design", "Mechanical Design"],
       category: "Robotics",
       github: "https://github.com/sarveshsw",
       //webapp: "https://whatsapp-clone-rishav.web.app",
+    },
+    {
+      id: 7,
+      mediaType: "image",
+      title: "Serv2U",
+      description:
+        "Serv2U was my startup, we were involved in the food delivering industry. The goal of Serv2U was to deliver freshly prepared homemade food on demand. Serv2U was a launchpad for homecooks to start their own catering business without the hassle of setting up a physical shop or restaurant and worrying about marketing.",
+      mediaUrl:
+       Serv2ULandingPage,
+      tags: [
+        "Python",
+        "AWS",
+        "API Creation",
+        "Teamwork",
+        "Version Control",
+        "CI/CD",
+        "React Js",
+        "MongoDb",
+        "Team Management",
+
+      ],
+      category: "Web-App",
+      github: "https://github.com/sarveshsw",
+      //webapp: "https://trackify.duckdns.org",
     },
   ];
   

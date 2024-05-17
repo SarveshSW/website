@@ -91,7 +91,7 @@ const Body = styled.div`
 `
 
 
-const Role = styled.div`
+const School = styled.div`
     font-size: 18px;
     font-weight: 600;
     color: ${({ theme }) => theme.text_primary};
@@ -100,7 +100,7 @@ const Role = styled.div`
     }
 `
 
-const Company = styled.div`
+const Grade = styled.div`
     font-size: 14px;
     font-weight: 500;
     color: ${({ theme }) => theme.text_secondary};
@@ -118,22 +118,8 @@ const Duration = styled.div`
     }
 `
 
-
-const Skills = styled.div`
-    width: 100%;
-    display: flex;
-    gap: 12px;
-    margin-top: -10px;
-`
-
-const ItemWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-`
-
-const Skill = styled.div`
-    font-size: 15px;
+const Degree = styled.div`
+    font-size: 12px;
     font-weight: 400;
     color: ${({ theme }) => theme.text_primary};
     @media only screen and (max-width: 768px){
@@ -141,34 +127,23 @@ const Skill = styled.div`
     }
 `
 
-const ExperienceCard = ({experience}) =>  {
+const EducationCard = ({education}) =>  {
     return (<Card>
         <Top>
-            <Image src={experience.img} />
+            <Image src={education.img} />
             <Body>
-                <Role>{experience.role}</Role>
-                <Company>{experience.company}</Company>
-                <Duration>{experience.date}</Duration>
+                <School>{education.school}</School>
+                <Grade>{education.grade}</Grade>
+                <Duration>{education.date}</Duration>
+                <Degree>Degree: {education.degree}</Degree>
             </Body>
         </Top>
         <Description>
-            {experience?.desc && 
-            <Span>{experience?.desc}</Span>}
-            {experience?.skills &&
-            <>
-            <br />
-            <Skills>
-                <ItemWrapper>
-                    {experience?.skills?.map((skill,index) => (
-                        <Skill>• {skill}</Skill>
-                    ))}
-                </ItemWrapper>
-            </Skills>
-            </>
-            }
+            {education?.desc && 
+            <Span>{education?.desc}</Span>}
         </Description>
-        {experience.doc && <a href={experience.doc} target="new"><Document src={experience.doc}/></a>}
+        {education.doc && <a href={education.doc} target="new"><Document src={education.doc}/></a>}
     </Card>)
 }
 
-export default ExperienceCard
+export default EducationCard

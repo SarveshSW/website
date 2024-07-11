@@ -140,6 +140,46 @@ export const Bio = {
     },
     {
       id: 2,
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS30Ic95QY6Reg8VUnNrmnPzrKZMIKxILBtSQ&s",
+      role: "Commonwealth Bank Software Engineering Job Simulation on Forage ",
+      company: "CommBank x Forage",
+      date: "Jul 2024 - Jul 2024",
+      desc: "Completed a job simulation focused on backend and frontend development for Commonwealth Bank's Software Engineering team. Extended the backend using C# to enable icons, gaining proficiency in .NET, MongoDB, Postman, and Git. Modified an existing React/Redux frontend to enable icons, expanding expertise in React, Redux, TypeScript, NPM, and Git. Strengthened coding skills and learned unit testing with C#, xUnit, and .NET, ensuring comprehensive code coverage and support for icons. Improved Git and Github skills, emphasizing effective communication through the submission of changes for team review.",
+      skills: [
+          ".NET",
+        "AJAX",
+        "AXIOS",
+        "C#",
+        "COMMUNICATION",
+        "GIT",
+        "GITHUB",
+        "MONGODB",
+        "NPM",
+        "POSTMAN",
+        "REACT",
+        "REDUX",
+        "TYPESCRIPT",
+        "UNIT TESTING",
+        "XUNIT",
+      ],
+    },
+    {
+      id: 3,
+      img: "https://cdn2.hubspot.net/hubfs/275132/Imported_Blog_Media/unbound-logo-1.jpeg",
+      role: "Mechatronics Engineering Intern",
+      company: "Unbound",
+      date: "Mar 2023 - May 2023",
+      desc: "Led a team to design a bicycle to ebike conversion kit. Conducted thorough research based on similar products and implemented similar designs of the conversion kit using Solidworks.",
+      skills: [
+        "Leadership",
+        "Communication",
+        "Compliance",
+        "Mechanical Engineering",
+        "CAD"
+      ],
+    },
+    {
+      id: 4,
       img: "https://tutordoctor.com.au/wp-content/uploads/2019/05/gWHwwTOQ-1024x478.jpg",
       role: "Tutor",
       company: "Tutor Doctor North Shore",
@@ -152,7 +192,7 @@ export const Bio = {
         "Physics",
         "Computer Science"
       ],
-    },
+    }
     
   ];
   

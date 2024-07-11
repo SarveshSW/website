@@ -116,7 +116,7 @@ const ModalContent = styled.div`
     max-width: 600px;
     box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
     overflow: auto;
-    max-height: 100%;
+    max-height: 80%;
     min-height:20vh;
     margin: auto;
 `;

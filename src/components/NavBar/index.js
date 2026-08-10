@@ -5,7 +5,7 @@ import {DiAptana} from 'react-icons/di';
 import {FaBars} from 'react-icons/fa';
 import { Bio } from '../../data/constant.js';
 const Nav = styled.div`
-    background-color: ${({theme}) => theme.bg};
+    background: ${({theme}) => theme.bg};
     height: 80px;
     display: flex;
     align-items: center;
@@ -14,8 +14,12 @@ const Nav = styled.div`
     position: sticky;
     top: 0;
     z-index: 10;
+    border-bottom: 1px solid ${({theme}) => theme.section_color};
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    
     @media (max-width: 960px) {
-        trastion: 0.8s all ease;
+        height: 70px;
     }
 `;
 const NavContainer = styled.div`
@@ -92,26 +96,35 @@ const ButtonContainer = styled.div`
   }
 `;
 const GitHubButton = styled.a`
-  background-color: transparent;
-  border: 1.8px solid ${({ theme }) => theme.black};
-  border-radius: 20px;
+  background: linear-gradient(135deg, ${({ theme }) => theme.primary}, ${({ theme }) => theme.primary}DD);
+  border: 2px solid ${({ theme }) => theme.primary};
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: ${({ theme }) => theme.black};
-  padding: 0 20px;
+  color: ${({ theme }) => theme.bg};
+  padding: 0 24px;
   text-decoration: none;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   height: 70%;
-    :hover {
-      background: ${({ theme }) => theme.primary};
-      color: ${({ theme }) => theme.card};     
-    }
-    @media screen and (max-width: 768px) { 
-    font-size: 0.8rem;
-    }
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 8px ${({ theme }) => theme.primary}30;
+  
+  &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px ${({ theme }) => theme.primary}40;
+  }
+  
+  &:active {
+      transform: translateY(0);
+  }
+  
+  @media screen and (max-width: 768px) { 
+      font-size: 0.9rem;
+      padding: 0 16px;
+  }
 `;
 export const Span = styled.div`
     padding: 0 4px;
@@ -162,9 +175,9 @@ const NavBar = () => {
     <Nav>
       <NavContainer>
           <NavLogo to = "/">
-          <a style={{ display: "flex", alignItems: "center", color: "black", marginBottom: '20', cursor: 'pointer' }}>
+          <span style={{ display: "flex", alignItems: "center", color: theme.text_primary, marginBottom: '20', cursor: 'pointer', textDecoration: 'none' }}>
             <DiAptana size="3rem" /> <Span>Sarvesh Wanzare</Span>
-          </a>
+          </span>
           </NavLogo>
           <MobileIcon>
             <FaBars

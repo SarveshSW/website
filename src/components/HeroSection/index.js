@@ -2,22 +2,49 @@ import React from 'react';
 import styled from "styled-components";
 import {Bio} from "../../data/constant.js";
 import Typewriter from "typewriter-effect";
-import ProfilePic from "../../media/HeroImage.jpg"
+import ProfilePic from "../../media/Sarvesh-Headshot-Cropped.jpg";
 const HeroContainer = styled.div`
-    background-color: ${({theme}) => theme.bgLight};
+    background: linear-gradient(135deg, ${({theme}) => theme.bgLight} 0%, ${({theme}) => theme.bg} 100%);
     display: flex;
     justify-content: center;
-    postion:relative;
-    padding: 80px 30px;
-    @media (max-width: 960px) {
-        padding: 66px 16px;
-      }
-      @media (max-width: 640) {
-        padding: 32px 16px;
-      }
-      min-height: 40vh;
+    position: relative;
+    padding: 100px 30px;
+    min-height: 100vh;
     z-index: 1;
+    overflow: hidden;
     
+    &::before {
+        content: '';
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, ${({theme}) => theme.primary}20, transparent);
+        border-radius: 50%;
+        top: -100px;
+        right: -100px;
+        pointer-events: none;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, ${({theme}) => theme.primary}15, transparent);
+        border-radius: 50%;
+        bottom: -100px;
+        left: -100px;
+        pointer-events: none;
+    }
+    
+    @media (max-width: 960px) {
+        padding: 80px 20px;
+        min-height: auto;
+    }
+    
+    @media (max-width: 640px) {
+        padding: 60px 16px;
+    }
 `;
 
 export const HeroInnerContainer = styled.div`
@@ -74,16 +101,19 @@ export const HeroRightContainer = styled.div`
 
 
 export const Title = styled.div`
-  font-weight: 700;
-  font-size: 50px;
+  font-weight: 800;
+  font-size: 56px;
   color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
+  line-height: 72px;
+  letter-spacing: -1px;
+  
   @media (max-width: 960px) {
     text-align: center;
+    font-size: 48px;
   }
 
   @media (max-width: 640px) {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 48px;
     margin-bottom: 8px;
   }
@@ -94,8 +124,9 @@ export const SubText = styled.div`
   font-size: 32px;
   display: flex;
   gap: 12px;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.text_secondary};
   line-height: 68px;
+  
   @media (max-width: 960px) {
     text-align: center;
   }
@@ -105,32 +136,33 @@ export const SubText = styled.div`
     margin-bottom: 16px;
   }
 `;
-/*
-export const Span = styled.span`
+
+export const SpanTypeWriter = styled.span`
   color: ${({ theme }) => theme.primary};
   cursor: pointer;
-`;*/
-export const SpanTypeWriter = styled.span`
-  color: ${({ theme }) => theme.black};
-  cursor: pointer;
-    font-weight: 600;
-    font-size: 32px;
-    display: flex;
-    gap: 12px;
+  font-weight: 700;
+  font-size: 32px;
+  display: flex;
+  gap: 12px;
 `;
+
 export const SubTitle = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   line-height: 32px;
-  margin-bottom: 42px;
-  color: ${({ theme }) => theme.text_primary + 95};
+  margin-bottom: 32px;
+  color: ${({ theme }) => theme.text_secondary};
+  max-width: 600px;
 
   @media (max-width: 960px) {
     text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (max-width: 640px) {
     font-size: 16px;
-    line-height: 32px;
+    line-height: 28px;
   }
 `;
 
@@ -139,56 +171,70 @@ export const ResumeButton = styled.a`
     -moz-appearance: button;
     appearance: button;
     text-decoration: none;
-    width: 30%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 280px;
     text-align: center;
-    padding: 10px 0px;
-    color:${({ theme }) => theme.black};
-    border-radius: 20px;
+    padding: 14px 32px;
+    color: ${({ theme }) => theme.bg};
+    background: linear-gradient(135deg, ${({ theme }) => theme.primary}, ${({ theme }) => theme.primary}DD);
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
-    transition: all 0.2s ease-in-out !important;
-    background: ;
+    transition: all 0.3s ease-in-out !important;
+    border: 2px solid ${({ theme }) => theme.primary};
+    box-shadow: 0 4px 16px ${({ theme }) => theme.primary}30;
     
-    box-shadow:  5px 5px 5px #1F2634,
-    -5px -5px 5px #1F2634;
     &:hover {
-        transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px ${({ theme }) => theme.primary}50;
+    }
     
+    &:active {
+        transform: translateY(-1px);
+    }
     
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
+    @media (max-width: 960px) {
+        max-width: 250px;
+    }
 
+    @media (max-width: 640px) {
+        padding: 12px 24px;
+        font-size: 16px;
+        max-width: 200px;
+    } 
 `;
 
 
-export const Image = styled.img `
-width: 100%;
-position: relative;
-border-radius: 0%;
-margin-right: -100px;
-max-height:400px;
-max-width: 500px;
-object-fit: cover;
-object-position: center;
-border: 2px solid${({theme}) => theme.primary};
-@media (max-width: 768px) {
-    margin-right: 0px;
+export const Image = styled.img`
+    width: 100%;
+    position: relative;
+    border-radius: 16px;
+    margin-right: -50px;
+    max-height: 450px;
     max-width: 400px;
-    max-height: 500px;
-}
-@media (max-width: 640) {
-    margin-right: 0px;
-    max-width: 280px;
-    max-height: 280px;
-}
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid ${({theme}) => theme.primary};
+    box-shadow: 0 8px 32px ${({theme}) => theme.primary}30;
+    transition: all 0.3s ease-in-out;
+    
+    @media (max-width: 768px) {
+        margin-right: 0px;
+        max-width: 320px;
+        max-height: 380px;
+    }
+    
+    @media (max-width: 640px) {
+        margin-right: 0px;
+        max-width: 250px;
+        max-height: 300px;
+    }
+    
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 48px ${({theme}) => theme.primary}40;
+    }
 `;
 
 const Hero = () => {
